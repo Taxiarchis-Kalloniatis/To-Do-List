@@ -1,3 +1,0 @@
-Study greek;0
-Workout;0
-Code a to-do list;1
