@@ -97,7 +97,7 @@ int main(){
 				}else{
 					tasks[taskNumber-1].completed = true;
 					saveTasks(tasks);
-					cout<<"Task marked as completed\n";
+					cout<<"Task marked as completed.\n";
 				}
 			}
 		}else if (choice == 4){		// DELETE TASK
@@ -112,7 +112,7 @@ int main(){
 				}else{
 					tasks.erase(tasks.begin() + (taskNumber-1)); // delete the tasknumber-th - 1 task after the beggining of the vector
 					saveTasks(tasks);
-					cout<<"Task marked as completed\n";
+					cout<<"Task deleted.\n";
 				}
 			}
 		}else if (choice == 5){
