@@ -56,8 +56,8 @@ int main(){
 	
 	do{
 
-		cout<<"To-Do list @kalloniatis"<<endl;
-		cout<<"\nSelect an action,\n";
+		cout<<"\nTo-Do list @kalloniatis"<<endl;
+		cout<<"Select an action,\n";
 		cout<<"1. Add task.\n";
 		cout<<"2. View tasks. \n";
 		cout<<"3. Mark a task as completed. \n";
