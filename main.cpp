@@ -59,10 +59,11 @@ int main(){
 		cout<<"\nTo-Do list @kalloniatis"<<endl;
 		cout<<"Select an action,\n";
 		cout<<"1. Add task.\n";
-		cout<<"2. View tasks. \n";
-		cout<<"3. Mark a task as completed. \n";
+		cout<<"2. View tasks.\n";
+		cout<<"3. Mark a task as completed.\n";
 		cout<<"4. Delete a task.\n";
-		cout<<"5. Exit.\n";
+		cout<<"5. Update a task's description.\n";
+		cout<<"6. Exit.\n";
 		cout<<"Enter action's number: ";
 		cin>>choice;
 		
@@ -117,13 +118,32 @@ int main(){
 				}
 			}
 		}else if (choice == 5){
+			if (tasks.size() == 0){
+				cout<<"There are no available tasks.\n";
+			}else{
+				cout<<"Enter the task's number which you wish to change the description: ";
+				int taskNumber;
+				cin>>taskNumber;
+				if (taskNumber < 1 || taskNumber > tasks.size()){
+					cout<<"Invalid task number, please retry.\n";
+				}else{
+					cin.ignore();
+					cout<<"Please type the new description: ";
+					string desc;
+					getline(cin, desc);
+					tasks[taskNumber-1].description = desc;
+					saveTasks(tasks);
+					cout<<"Successfuly changed the task's description.\n";
+				}
+			}
+		}else if (choice == 6){
 			cout<<"\nExiting... \n";
 		}else{
 			cout<<"\nInvalid input please try again. \n";
 		}
 		
 		
-	} while (choice != 5);
+	} while (choice != 6);
 	
 	
 	return 0;
